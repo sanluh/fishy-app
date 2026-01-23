@@ -188,6 +188,19 @@
             color: rgba(255,255,255,0.8);
             font-size: 0.9rem;
         }
+
+        /* Hero Video */
+        .hero-video {
+            margin: -20px 0 40px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .hero-video video {
+            width: 100%;
+            display: block;
+        }
     </style>
 </head>
 <body class="en">
@@ -206,6 +219,14 @@
                 <span class="lang-fi">Henkilökohtainen kalastuspäiväkirjasi</span>
             </p>
         </header>
+
+        <!-- Hero Video -->
+        <div class="hero-video">
+            <video autoplay muted loop playsinline>
+                <source src="water-showcase.webm" type="video/webm">
+                <source src="water-showcase-twitter.mp4" type="video/mp4">
+            </video>
+        </div>
 
         <!-- About Section - English -->
         <div class="card lang-en">
