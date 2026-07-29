@@ -189,6 +189,84 @@
             font-size: 0.9rem;
         }
 
+        /* Collaboration — Pataluha (styled in the cabin site's own palette) */
+        .collab {
+            background: #0d1218;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .collab-photo {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .collab-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 42%;
+            display: block;
+        }
+
+        .collab-body {
+            padding: 32px;
+        }
+
+        .collab-eyebrow {
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #4ee27d;
+            margin-bottom: 10px;
+        }
+
+        .collab h2 {
+            color: #ece4d3;
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+        }
+
+        .collab p {
+            color: #a9b0ab;
+            margin-bottom: 14px;
+        }
+
+        .collab-facts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 20px 0 24px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            color: #aeb8be;
+        }
+
+        .collab-facts span {
+            border: 1px solid #26343f;
+            border-radius: 999px;
+            padding: 5px 12px;
+        }
+
+        .collab-link {
+            display: inline-block;
+            background: #4ee27d;
+            color: #0d1218;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .collab-link:hover {
+            background: #3ccb69;
+        }
+
         /* Hero Video */
         .hero-video {
             margin: -20px 0 40px;
@@ -352,6 +430,41 @@
             <a href="https://apps.apple.com/app/id6755823114">
                 <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
             </a>
+        </div>
+
+        <!-- Collaboration — Pataluha -->
+        <div class="collab">
+            <div class="collab-photo">
+                <img src="pataluha-river.jpg" alt="Mist over the Simojoki river at dawn">
+            </div>
+
+            <div class="collab-body lang-en">
+                <p class="collab-eyebrow">Collaboration</p>
+                <h2>Made on the Simojoki, with Pataluha</h2>
+                <p>Fishy was built and tested on the banks of the Simojoki at <strong>Pataluha</strong> — a salmon cabin in Alaniemi, Simo, on the edge of Lapland. A lot of what ended up in the app came out of real days on those rapids.</p>
+                <p>If you want to fish the river yourself, Pataluha is a proper cabin rather than the usual fishing hut: a wood-heated sauna, a full kitchen, a hot shower and three rapids within reach.</p>
+                <div class="collab-facts">
+                    <span>SIMOJOKI</span>
+                    <span>ALANIEMI, SIMO</span>
+                    <span>SLEEPS 6</span>
+                    <span>SALMON JUN–AUG</span>
+                </div>
+                <a class="collab-link" href="https://www.pataluhafishing.fi">Visit pataluhafishing.fi →</a>
+            </div>
+
+            <div class="collab-body lang-fi">
+                <p class="collab-eyebrow">Yhteistyö</p>
+                <h2>Tehty Simojoella, yhdessä Pataluhan kanssa</h2>
+                <p>Fishy on kehitetty ja testattu Simojoen rannalla <strong>Pataluhassa</strong> — lohimökissä Alaniemessä, Simossa, Lapin rajalla. Moni sovelluksen ominaisuus on syntynyt oikeilla kalapäivillä näillä koskilla.</p>
+                <p>Jos haluat itse joelle, Pataluha ei ole tavallinen kalamaja: puulämmitteinen sauna, täysin varusteltu keittiö, kuuma suihku ja kolme koskea lähistöllä.</p>
+                <div class="collab-facts">
+                    <span>SIMOJOKI</span>
+                    <span>ALANIEMI, SIMO</span>
+                    <span>VUODEPAIKKOJA 6</span>
+                    <span>LOHIKAUSI KESÄ–ELO</span>
+                </div>
+                <a class="collab-link" href="https://www.pataluhafishing.fi">Tutustu: pataluhafishing.fi →</a>
+            </div>
         </div>
 
         <nav class="links">
