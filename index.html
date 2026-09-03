@@ -267,6 +267,139 @@
             background: #3ccb69;
         }
 
+        /* Wallpapers */
+        .wallpapers {
+            background: linear-gradient(180deg, #1c3327 0%, #122219 100%);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            color: #f5f0e8;
+        }
+
+        .wall-eyebrow {
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #e85d35;
+            margin-bottom: 10px;
+        }
+
+        .wallpapers h2 {
+            color: #f5f0e8;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        .wallpapers > .lang-en > p:last-child,
+        .wallpapers > .lang-fi > p:last-child {
+            color: #c9d1c8;
+        }
+
+        .wall-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 20px;
+            margin: 24px 0 20px;
+        }
+
+        .wall-card {
+            margin: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .wall-card > a:first-child {
+            display: block;
+            width: 100%;
+        }
+
+        .wall-card .wall-btn {
+            margin-top: auto;
+        }
+
+        .wall-card img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1320 / 2868;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 1px solid rgba(245,240,232,0.14);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+            transition: transform 0.2s;
+        }
+
+        .wall-card a:hover img {
+            transform: translateY(-3px);
+        }
+
+        .wall-card figcaption {
+            margin: 14px 0 10px;
+        }
+
+        .wall-card figcaption b {
+            display: block;
+            font-size: 1rem;
+        }
+
+        .wall-card figcaption span {
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 0.68rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #a9b0ab;
+        }
+
+        .wall-btn {
+            display: inline-block;
+            background: #e85d35;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+
+        .wall-btn:hover {
+            background: #d14e28;
+        }
+
+        .wall-tip {
+            font-size: 0.85rem;
+            color: #a9b0ab;
+            border-top: 1px solid rgba(245,240,232,0.12);
+            padding-top: 16px;
+        }
+
+        /* Narrow screens: one swipeable row instead of a tall stack */
+        @media (max-width: 560px) {
+            .wall-grid {
+                grid-template-columns: none;
+                grid-auto-flow: column;
+                grid-auto-columns: 190px;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                margin-left: -32px;
+                margin-right: -32px;
+                padding: 4px 32px 12px;
+                scrollbar-width: none;
+            }
+
+            .wall-grid::-webkit-scrollbar {
+                display: none;
+            }
+
+            .wall-card {
+                scroll-snap-align: start;
+            }
+        }
+
         /* Hero Video */
         .hero-video {
             margin: -20px 0 40px;
@@ -431,6 +564,62 @@
                 <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
             </a>
         </div>
+
+        <!-- Wallpapers -->
+        <section class="wallpapers" id="wallpapers">
+            <div class="lang-en">
+                <p class="wall-eyebrow">Free download</p>
+                <h2>Fishy on your lock screen</h2>
+                <p>Three wallpapers drawn from the Fishy icon and the Simojoki night sky. Made for iPhone 17 Pro Max (1320 × 2868) and they scale to every iPhone.</p>
+            </div>
+            <div class="lang-fi">
+                <p class="wall-eyebrow">Ilmainen lataus</p>
+                <h2>Fishy lukitusnäytöllesi</h2>
+                <p>Kolme taustakuvaa, jotka on piirretty Fishyn kuvakkeesta ja Simojoen yötaivaasta. Tehty iPhone 17 Pro Maxille (1320 × 2868) ja ne skaalautuvat jokaiseen iPhoneen.</p>
+            </div>
+
+            <div class="wall-grid">
+                <figure class="wall-card">
+                    <a href="wallpapers/fishy-nightwater.png" download="fishy-nightwater.png"><img src="wallpapers/fishy-nightwater-preview.jpg" alt="Nightwater wallpaper: the Fishy fish and orange ring over a dark green night river" loading="lazy"></a>
+                    <figcaption>
+                        <b>Nightwater</b>
+                        <span class="lang-en">Forest green · the default</span>
+                        <span class="lang-fi">Metsänvihreä · perusvalinta</span>
+                    </figcaption>
+                    <a class="wall-btn" href="wallpapers/fishy-nightwater.png" download="fishy-nightwater.png">
+                        <span class="lang-en">Download</span>
+                        <span class="lang-fi">Lataa</span>
+                    </a>
+                </figure>
+                <figure class="wall-card">
+                    <a href="wallpapers/fishy-aurora.png" download="fishy-aurora.png"><img src="wallpapers/fishy-aurora-preview.jpg" alt="Aurora wallpaper: the Fishy ring in front of a treeline under the northern lights on the Simojoki" loading="lazy"></a>
+                    <figcaption>
+                        <b>Aurora</b>
+                        <span class="lang-en">Shot on the Simojoki</span>
+                        <span class="lang-fi">Kuvattu Simojoella</span>
+                    </figcaption>
+                    <a class="wall-btn" href="wallpapers/fishy-aurora.png" download="fishy-aurora.png">
+                        <span class="lang-en">Download</span>
+                        <span class="lang-fi">Lataa</span>
+                    </a>
+                </figure>
+                <figure class="wall-card">
+                    <a href="wallpapers/fishy-daylight.png" download="fishy-daylight.png"><img src="wallpapers/fishy-daylight-preview.jpg" alt="Daylight wallpaper: green Fishy fish in an orange ring on a cream background" loading="lazy"></a>
+                    <figcaption>
+                        <b>Daylight</b>
+                        <span class="lang-en">Cream · light mode</span>
+                        <span class="lang-fi">Kerma · vaalea</span>
+                    </figcaption>
+                    <a class="wall-btn" href="wallpapers/fishy-daylight.png" download="fishy-daylight.png">
+                        <span class="lang-en">Download</span>
+                        <span class="lang-fi">Lataa</span>
+                    </a>
+                </figure>
+            </div>
+
+            <p class="wall-tip lang-en">On iPhone: tap Download, open the image from Files or Photos, then Share → Use as Wallpaper.</p>
+            <p class="wall-tip lang-fi">iPhonella: napauta Lataa, avaa kuva Tiedostot- tai Kuvat-sovelluksesta ja valitse Jaa → Käytä taustakuvana.</p>
+        </section>
 
         <!-- Collaboration — Pataluha -->
         <div class="collab">

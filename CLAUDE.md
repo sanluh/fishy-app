@@ -11,6 +11,7 @@ Fishy is a marketing/landing website for an iOS fishing journal app. The website
 - `index.html` - Landing page with app description and features
 - `privacy.html` - Privacy policy page
 - `support.html` - Support page with FAQs
+- `wallpapers/` - Downloadable iPhone wallpapers (full-size PNG + `-preview.jpg` cards); sources and render script live in `../FishyMarketing/wallpapers/src`
 
 ## Development
 
